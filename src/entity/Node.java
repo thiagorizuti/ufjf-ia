@@ -153,6 +153,7 @@ public class Node implements Comparable<Node> {
 	}
 
 	public Node buscaBacktracking(HashMap<String, Integer> hashMap, List<Node> list) {
+		printNode();
 		if (this.key.equals(Tree.objetivo)) {
 			return this;
 		}
@@ -171,6 +172,7 @@ public class Node implements Comparable<Node> {
 		return null;
 	}
 	public Node buscaProfundidade(HashMap<String, Integer> hashMap, List<Node> list) {
+		printNode();
 		if (this.key.equals(Tree.objetivo)) {
 			return this;
 		}
@@ -190,6 +192,7 @@ public class Node implements Comparable<Node> {
 	}
 
 	public Node buscaOrdenada(HashMap<String, Integer> hashMap, List<Node> list) {
+		printNode();
 		if (this.key.equals(Tree.objetivo)) {
 			return this;
 		}
@@ -211,6 +214,7 @@ public class Node implements Comparable<Node> {
 	}
 
 	public Node buscaA(HashMap<String, Integer> hashMap, List<Node> list) {
+		printNode();
 		if (this.key.equals(Tree.objetivo)) {
 			return this;
 		}
@@ -232,6 +236,7 @@ public class Node implements Comparable<Node> {
 	}
 
 	public Node buscaIDA(HashMap<String, Integer> hashMap, List<Node> list) {
+		printNode();
 		if (this.key.equals(Tree.objetivo)) {
 			return this;
 		}
@@ -255,6 +260,7 @@ public class Node implements Comparable<Node> {
 	}
 
 	public Node buscaGulosa(HashMap<String, Integer> hashMap, List<Node> list) {
+		printNode();
 		if (this.key.equals(Tree.objetivo)) {
 			return this;
 		}
@@ -294,5 +300,14 @@ public class Node implements Comparable<Node> {
 	@Override
 	public int compareTo(Node o) {
 		return Integer.compare(this.val, o.val);
+	}
+
+	public void printNode(){
+		String s = "";
+		for( int i =0 ;i< level ;i++){
+			s+= " | ";
+		}
+		s+=key;
+		System.out.println(s);
 	}
 }
