@@ -287,12 +287,13 @@ public class Node implements Comparable<Node> {
 		char[] treearray = Tree.objetivo.toCharArray();
 		char[] nodearray = this.key.toCharArray();
 		for (int i = 0; i < nodearray.length; i++) {
-			if (nodearray[i] != treearray[i]) {
-				if (treearray[i] != '-') {
-					v++;
-				}
-
-			}
+                    if(nodearray[i]=='1' && i<= nodearray.length/2){
+                        v+=nodearray.length/2-i+1;
+                    }
+                    if(nodearray[i]=='0' && i>= nodearray.length/2){
+                        v+=i-nodearray.length/2+1;
+                    }
+                    
 		}
 		return v;
 	}

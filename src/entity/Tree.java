@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by jm on 5/28/16.
@@ -151,6 +152,11 @@ public class Tree {
 		System.out.println("expandidos: " + hashMap.size());
 		System.out.println("visitados: " + c);
 		System.out.println("do fator de ramificação: " + (float)(hashMap.size()-1)/(c-1));
+                
+            Set<String> set = hashMap.keySet();
+            for(String s : set){
+                System.out.println(s);
+            }
 	}
 
 }
